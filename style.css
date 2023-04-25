@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+body {
+  color: #111111;
+  background-color: #fff;
+  font-family: "Playfair Display", serif;
+}
+a {
+  text-decoration: none;
+  color: #181818;
+}
+.arrows {
+  display: flex;
+  align-items: center;
+}
+img,
+.img-container,
+.bright,
+main::after {
+  width: 100%;
+}
+img,
+.img-container,
+main::after {
+  height: 100%;
+}
+main {
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding-inline: clamp(1rem, 5%, 4rem);
+}
+main::after {
+  position: absolute;
+  right: 0;
+  content: "";
+  background: #0f2027;
+  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.76),
+      rgba(255, 245, 245, 0.79)
+    ),
+    url(img/IMG-4137.jpg) no-repeat 30% 50% / cover;
+  z-index: -1;
+}
+@media (min-width: 53.75rem) {
+  main::after {
+    width: 60%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.17),
+        rgba(0, 0, 0, 0.08)
+      ),
+      url(img/IMG-4137.jpg) no-repeat 70% 50% / cover;
+  }
+}
+nav,
+head,
+footer {
+  grid-column: span 12;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5em 0 0;
+}
+.logo a {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+.logo a:hover {
+  color: #fe8c4c;
+}
+@media (min-width: 37.5rem) {
+  .logo a {
+    font-size: 1.6rem;
+    margin-left: 80%;
+  }
+}
+.menu i {
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+header {
+  padding: 0 clamp(1.5rem, 5%, 3.5rem);
+  align-self: cente;
+  padding-block: min(20vh, 3rem);
+}
+h1 {
+  font-size: clamp(2.357rem, 1.3825rem + 4.9624vw, 6.5rem);
+  font-weight: 500;
+  line-height: 1.1;
+}
+header a {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  margin-top: 1.4rem;
+  font-size: 1rem;
+}
+@media (min-width: 37.5rem) {
+  header {
+    font-size: 1.1rem;
+  }
+}
+header a:hover {
+  color: #fe8c4c;
+}
+a i {
+  display: grid !important;
+  place-items: center;
+  background: #fe8c4c;
+  color: #fff;
+  width: 2.188rem;
+  height: 2.188rem;
+  border-radius: 50%;
+  margin-right: 0.625rem;
+}
+@media (min-width: 37.5rem) {
+  a i {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+a:hover i {
+  background: #111111;
+}
+footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 0 2.5em 0;
+  flex-direction: column;
+  row-gap: 2.6em;
+}
+@media (min-width: 53.75rem) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 60.5rem) {
+  footer {
+    padding: 3.124em 0 3.125em 3.5em;
+  }
+}
+.arrows {
+  gap: 0.625rem;
+  position: relative;
+  z-index: 10;
+  order: 1;
+}
+.arrows i {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.arrows i:hover {
+  color: #fe8c4c;
+}
+.bright {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  order: 2;
+  box-shadow: 0 0.563rem 1.25rem rgba(0, 0, 0, 0.13);
+}
+@media (min-width: 25rem) {
+  .bright {
+    flex-direction: row;
+  }
+}
+@media (min-width: 53.75rem) {
+  .bright {
+    position: absolute;
+    justify-content: initial;
+    max-height: 8.125rem;
+    box-shadow: none;
+  }
+}
+.img-container {
+  display: flex;
+  margin-left: auto;
+  overflow: hidden;
+  aspect-ratio: 3/2;
+}
+@media (min-width: 53.75rem) {
+  .img-container {
+    width: 12.813rem;
+  }
+}
+.img-container img {
+  object-fit: cover;
+  display: block;
+  object-position: 50% 75%;
+  transition: 0.3s ease-in-out;
+}
+.img-container:hover img {
+  transform: scale(1.1);
+}
+@media (min-width: 53.75rem) {
+  .idea > div {
+    flex-basis: 40%;
+  }
+}
+.left-col {
+  text-align: right;
+}
+.right-col {
+  background: #e7ecf069;
+  display: grid;
+  align-content: center;
+  padding: 1.25rem;
+  max-width: 24.375em;
+}
+@media (min-width: 60.5rem) {
+  .right-col {
+    padding: 2.5em;
+  }
+}
+.right-col a {
+  font-size: 1rem;
+  font-weight: 600;
+}
+@media (min-width: 60.5rem) {
+  .right-col a {
+    padding: 1.2rem;
+  }
+}
+.right-col a:hover {
+  text-decoration: underline;
+}
+.right-col a span {
+  font-weight: 800;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 0.938em;
+  position: relative;
+  z-index: 10;
+  order: 3;
+}
+.icons i {
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.icons i:hover {
+  color: #fe8c4c;
+}
