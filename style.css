@@ -324,3 +324,56 @@ footer {
 .icons i:hover {
   color: #fe8c4c;
 }
+/* FOR PRODUCTS PAGE */
+
+.prod{
+  min-height: 100vh;
+  position: relative;
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0.76),
+    rgba(255, 245, 245, 0.79)
+  ), url(img/IMG-4137.jpg);
+  background-repeat: repeat;
+  background-position: 110% 99%;
+}
+.products-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 3rem;
+  row-gap: 1rem;
+  justify-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 3rem auto 0 auto;
+}
+.product-tile{
+  margin-bottom: 1.8rem;
+  text-decoration: none;
+  text-align: center;
+}
+.product-tile img{
+  width: 500px;
+  height: 400px;
+  margin-bottom: 2rem;
+}
+@media (max-width: 68em){
+.products-grid{
+  grid-template-columns: 1fr;
+}
+.prod{
+  background-position: 173% 0%;
+}
+}
+.prodF{
+  background: url(img/BH\ Footer.jpg);
+  color: #fe8c4c;
+  font-size: 1.5rem;
+}
+.prodF p{
+  text-align: center;
+  margin: auto;
+  font-size: 1.8rem;
+}
